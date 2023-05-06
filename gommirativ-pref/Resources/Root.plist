@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Usage</string>
+			<key>footerText</key>
+			<string>
+    1. Wipe app data or reinstall the app
+       (This step is required to remove stored jb detection info!!)
+    2. Login to your account
+    3. Enjoy:)
+			</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Contact</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Twitter (@m4fn3)</string>
+			<key>action</key>
+			<string>OpenTwitter</string>
+			<key>icon</key>
+			<string>TwitterIcon.png</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>GitHub (m4fn3)</string>
+			<key>action</key>
+			<string>OpenGitHub</string>
+			<key>icon</key>
+			<string>GitHubIcon.png</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>gommirativ</string>
+</dict>
+</plist>
