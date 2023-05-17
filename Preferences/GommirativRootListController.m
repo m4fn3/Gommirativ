@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
-#import "XXXRootListController.h"
+#import "GommirativRootListController.h"
 #import <sys/sysctl.h>
 
-@implementation XXXRootListController
+@implementation GommirativRootListController
 
 - (NSArray *)specifiers {
 	if (!_specifiers) {
@@ -26,10 +26,15 @@
 }
 
 - (void)ApplyChanges {
-	NSTask* task = [[NSTask alloc] init];
-    [task setLaunchPath:@"/usr/bin/killall"];
-    [task setArguments:[NSArray arrayWithObjects:@"Mirrativ", nil]];
-    [task launch];
+    NSArray* launchPaths = @[@"/usr/bin/killall", @"/var/jb/usr/bin/killall"];
+	for (NSString* launchPath in launchPaths) {
+		if ([[NSFileManager defaultManager] fileExistsAtPath:launchPath]) {
+			NSTask* task = [[NSTask alloc] init];
+			[task setLaunchPath:launchPath];
+			[task setArguments:@[@"Mirrativ"]];
+			[task launch];
+		}
+	}
 }
 
 @end

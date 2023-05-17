@@ -1,6 +1,6 @@
 #import <Preferences/PSListController.h>
 
-@interface XXXRootListController : PSListController
+@interface GommirativRootListController : PSListController
 
 @end
 
