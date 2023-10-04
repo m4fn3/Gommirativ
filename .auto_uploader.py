@@ -7,17 +7,17 @@ import time
 
 with paramiko.SSHClient() as ssh:
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('192.168.11.21', port=22, username='root', password='alpine')
+    ssh.connect('192.168.11.10', port=22, username='root', password='alpine')
     client = scp.SCPClient(ssh.get_transport())
 
 
     def on_modified(event):
         filepath = event.src_path
         print(f"{filepath}")
-        client.put(filepath, "/var/root/Gommirativ/")
+        client.put(filepath, "/var/root/Gommirativ")
 
 
-    event_handler = PatternMatchingEventHandler(["Makefile", "Tweak.xm"])
+    event_handler = PatternMatchingEventHandler(["Makefile", "Tweak.xm","Tweak_bak.xm"])
     event_handler.on_modified = on_modified
 
     observer = Observer()
